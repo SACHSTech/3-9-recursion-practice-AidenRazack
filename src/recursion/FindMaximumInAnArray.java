@@ -7,7 +7,11 @@ public class FindMaximumInAnArray {
         }
 
         int currentMax = findMax(arr, n - 1);
-        return Math.max(currentMax, arr[n - 1]);
+        if (currentMax > arr[n - 1]) {
+            return currentMax;
+        } else {
+            return arr[n - 1];
+        }
     }
     
     public static void main(String[] args) {
